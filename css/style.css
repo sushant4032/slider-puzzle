@@ -1,0 +1,48 @@
+*,*:after,*:before{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font:inherit;
+}
+
+html{
+    font-size:1rerm;
+}
+
+.board{
+    width:425px;
+    height:425px;
+    border:15px solid grey;
+    margin:50px auto;
+    box-sizing: content-box;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    box-shadow: 2px 2px 5px 0px grey;
+     transition-duration: 1000ms;
+}
+
+.tile{
+    width:100px;
+    height:100px;
+    border:1px solid lightgrey;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size:2rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 0px grey;
+    border-radius: 3px;
+
+   
+}
+
+.blank{
+    border:none;
+    box-shadow: none;
+}
+
+.movable:hover{
+    background:yellow;
+}
