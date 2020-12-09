@@ -24,8 +24,9 @@ board.addEventListener('click', (e) => {
     const num = +tile.getAttribute('num');
     let row = Math.floor(pos / 4);
     let col = pos % 4;
-    const rowz = Math.floor(z / 4);
-    const colz = z % 4;
+
+    const rowz = Math.floor(z / 4); // row of blank cell
+    const colz = z % 4;             // col of blank cell
     if (Math.pow((rowz - row), 2) + Math.pow((colz - col), 2) == 1) {
         const pos = row * 4 + col;
         boardData[pos] = 0;
@@ -33,7 +34,6 @@ board.addEventListener('click', (e) => {
         z = pos;
         refresh();
     }
-
 });
 
 function refresh() {
@@ -60,7 +60,7 @@ function refresh() {
             const colz = z % 4;
             if (Math.pow((rowz - row), 2) + Math.pow((colz - col), 2) == 1) {
                 t.classList.add('movable');
-             }
+            }
             board.append(t);
         }
 
